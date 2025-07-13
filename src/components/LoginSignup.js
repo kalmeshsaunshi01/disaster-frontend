@@ -369,6 +369,7 @@ const LoginSignup = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
+        credentials: "include", // ✅ important for CORS with cookies
       });
 
       const data = await response.json();
