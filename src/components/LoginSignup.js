@@ -358,7 +358,8 @@ const LoginSignup = () => {
     setLoading(true);
     setError("");
 
-    const endpoint = isSignup ? "http://127.0.0.1:5000/signup" : "http://127.0.0.1:5000/login";
+    const endpoint = isSignup? "https://disaster-backend-1.onrender.com/signup" : "https://disaster-backend-1.onrender.com/login";
+
     const userData = isSignup
       ? { name: formData.name, email: formData.email, password: formData.password }
       : { email: formData.email, password: formData.password };
