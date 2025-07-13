@@ -322,9 +322,8 @@ const UploadForm = () => {
     selectedFiles.forEach((file) => formData.append("files[]", file));
 
     try {
-      const response = await axios.post(`${backendUrl}/upload`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(`${backendUrl}/upload`, formData);
+
       navigate("/results", { state: { results: response.data.results } });
     } catch (error) {
       console.error("Upload Error:", error);
