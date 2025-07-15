@@ -303,7 +303,7 @@ const UploadForm = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const backendUrl = "https://disaster-backend-1.onrender.com/upload";
+  const backendUrl = "https://disaster-backend-1.onrender.com";
 
 
   const handleFileChange = (event) => {
